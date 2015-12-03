@@ -14,7 +14,7 @@ bit_requests = BitTransferRequests(wallet, Config().username)
 
 in_msg_url = "https://hooks.slack.com/services/---/---/---"
 
-result == ""
+result = ""
 
 @app.route('/from')
 @payment.required(1000)
@@ -33,17 +33,16 @@ def send_translation_request():
 @app.route('/to', methods=['GET','POST'])
 def receive_translation_result():
 	
-	if request.methods == 'GET':
-		return result
+	if request.method == 'GET':
+		if result =="":
+			return "Result did not found"
+		else 
+			return result
 
 	if request.method == 'POST':
-		data = request.data
-		dataDict = json.loads(data)
-
-		result = dataDict.get('text', default='Not found')
-
-		print "Received"
-
+		result = request.form['text']
+		print(result)
+		return result
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0',port=5000)
+	app.run(host='localhost',port=8080)

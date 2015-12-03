@@ -11,8 +11,6 @@ wallet = Wallet()
 username = Config().username
 requests = BitTransferRequests(wallet, username)
 
-# merchant server address
-server_url = 'http://localhost:5000/'
 
 def translate():
 
@@ -21,9 +19,9 @@ def translate():
     message = input("Please enter the sentence you want to translate: ")
 
     # call the machine-payable endpoint
-    response = requests.get(url='http://localhost:5000/from?text='+message)
+    response = requests.get(url='http://localhost:8080/from?text='+message)
 
-    response = requests.get(url='http://localhost:5000/to')
+    response = requests.get(url='http://localhost:8080/to')
 
     print("Response: ")
     print(response)
