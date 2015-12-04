@@ -17,7 +17,7 @@ in_msg_url = "https://hooks.slack.com/services/---/---/---"
 result = ""
 
 @app.route('/from')
-@payment.required(1000)
+@payment.required(1)
 def send_translation_request():
 
 	text = request.args.get('text')
