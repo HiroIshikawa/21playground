@@ -24,7 +24,7 @@ def send_translation_request():
 
 	payload = {"channel":"#translation", "username": "request", "text": text}
 
-	r = requests.post(in_msg_url, json=payload)
+	r = request.post(in_msg_url, json=payload)
 
 	print('Request sent...!')
 	print('Translating...')
