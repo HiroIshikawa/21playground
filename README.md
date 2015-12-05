@@ -1,7 +1,14 @@
 # 21playground
 
-Translation
+- Translation
+
 : bitcoin-payable human translation service
 
-Using Slack incoming/outgoing WebHook, it accepts translation query from CLI on 21 BCC and
+'''
+Using Slack incoming/outgoing WebHook, it accepts translation query from CLI on 21 BCC and 
+
 respond the result back through a Slack forum where translators are standing by.
+'''
+
+
+- 
