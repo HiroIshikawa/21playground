@@ -65,5 +65,7 @@ Result:
 
 HTTP URI: /buy
 
+Params: None
+
 Result:
 	- Buy a selected photo
