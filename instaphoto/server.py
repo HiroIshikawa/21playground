@@ -13,13 +13,10 @@ def index():
 	resp = requests.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + ACCESS_TOKEN)
 
 	data = json.loads(resp.text)['data']
-	#pprint(data)
 
 	for el in data:
 		pprint(el['images']['standard_resolution']['url'])
 	
-	#pics = data[""]
-	#pprint(pics)
 	return render_template('index.html')
 
 if __name__ == '__main__':
