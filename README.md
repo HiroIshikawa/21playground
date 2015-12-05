@@ -16,3 +16,7 @@ respond the result back through a Slack forum where translators are standing by.
 Using Instagram API, it enables a user to automatically fetch Instagram photos from private account to local folder
 
 and setup a bitcoin payable proxy for the access to it. 
+
+
+- Flask Sample
+: some flask samples
