@@ -1,11 +1,14 @@
-21 Bitcoin Computer playground
-==============================
+21 Btc Computer playground
+==========================
 
-Projects
---------
+Prototypes
+----------
 * **instaphoto**: Btc-payable Instagram photo garelley
-* **flask-sample**: flask sample codes
 
-Incomplete works-in-progress
+Works-in-progress
 ----------------------------
 * translation: Slack empowered btc-payable human translation service
+
+Learning
+--------
+* flask-sample: flask sample codes
