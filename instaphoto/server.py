@@ -28,7 +28,11 @@ for file_id in range(len(file_list)):
 	files[file_id+1] = file_list[file_id], random.randrange(1, 20)
 
 
+<<<<<<< HEAD
 ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
+=======
+ACCESS_TOKEN = 'YOUR ACCESS TOKEN HERE'
+>>>>>>> dfdea4a79f885a1735f36e8ae4bf8e5516891322
 
 
 # end point to initiate photo garelley
@@ -41,6 +45,7 @@ def update_images():
 
 	i = 0
 	for el in data:
+<<<<<<< HEAD
 		i = i+1
 		photo_url = el['images']['standard_resolution']['url']
 		pprint(photo_url)
@@ -80,3 +85,11 @@ def buy_file():
 
 if __name__ == '__main__':
 	app.run(debug='true')
+=======
+		pprint(el['images']['standard_resolution']['url'])
+	
+	return render_template('index.html')
+
+if __name__ == '__main__':
+	app.run()
+>>>>>>> dfdea4a79f885a1735f36e8ae4bf8e5516891322

@@ -1,7 +1,11 @@
-# 21playground
+21 Bitcoin Computer playground
+==============================
 
-Translation
-: bitcoin-payable human translation service
+Projects
+--------
+* **instaphoto**: Btc-payable Instagram photo garelley
+* **flask-sample**: flask sample codes
 
-Using Slack incoming/outgoing WebHook, it accepts translation query from CLI on 21 BCC and
-respond the result back through a Slack forum where translators are standing by.
+Incomplete works-in-progress
+----------------------------
+* translation: Slack empowered btc-payable human translation service
