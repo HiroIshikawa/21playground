@@ -6,8 +6,7 @@ from flask import Flask,render_template
 
 app = Flask(__name__)
 
-# USER_ID = '485679741'
-ACCESS_TOKEN = '485679741.1d8a980.7bacc3e0264640d59c63171106b23725'
+ACCESS_TOKEN = 'YOUR ACCESS TOKEN HERE'
 
 @app.route('/')
 def index():
