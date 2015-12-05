@@ -6,6 +6,8 @@ def index():
 	return 'Index Page'
 
 # simple routing example
+# the trailing slash is matter
+#  if you accee ~/hello/ here, it will produce 404 error
 @app.route('/hello')
 def hello():
 	return 'Hello!'
@@ -21,6 +23,15 @@ def show_user_profile(username):
 def show_post(post_id):
 	return 'Post %s' % post_id 
 
+# by default, a route only accept GET request
+# methods are polymorphism tools
+# it enables a noun (resource / URL) to behave in multiple way
+@app.route('/login', methods=['GET','POST'])
+def login():
+	if request.method == 'POST':
+		do_the_login()
+	else
+		show_the_login_form()
 
 
 
