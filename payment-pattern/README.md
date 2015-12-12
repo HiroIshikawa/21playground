@@ -1,0 +1,1 @@
+Payment pattern is the potential list of BTC payment pattern for any applications.
