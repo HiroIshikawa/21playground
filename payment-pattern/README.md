@@ -1,1 +1,1 @@
-Payment pattern is the potential list of BTC payment pattern for any applications.
+A list of BTC payment pattern for 21 btc computer driven applications.
