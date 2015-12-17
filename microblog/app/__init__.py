@@ -7,6 +7,7 @@ from config import basedir
 
 lm = LoginManager()
 lom.init_app(app)
+lm.login_view = 'login'
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
 
 app = Flask(__name__)
