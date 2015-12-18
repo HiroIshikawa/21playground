@@ -1,10 +1,9 @@
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
-from .forms import LoginForm
+from .forms import LoginForm, EditForm
 from .models import User
 from datetime import datetime
-from forms import LoginForm, EditForm
 
 @app.route('/')
 @app.route('/index')
@@ -94,7 +93,6 @@ def user(nickname):
                            user=user,
                            posts=posts)
 
-from forms import LoginForm, EditForm
 
 @app.route('/edit', methods=['GET', 'POST'])
 @login_required
@@ -111,3 +109,13 @@ def edit():
         form.nickname.data = g.user.nickname
         form.about_me.data = g.user.about_me
     return render_template('edit.html', form=form)
+
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    db.session.rollback()
+    return render_template('500.html'), 500
