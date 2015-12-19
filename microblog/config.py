@@ -20,5 +20,10 @@ MAIL_PORT = 25
 MAIL_USERNAME = None
 MAIL_PASSWORD = None
 
-# administrator list
+# administrator listfig
 ADMINS = ['you@example.com']
+
+# pagination
+POSTS_PER_PAGE = 3
+
+WHOOSH_BASE = os.path.join(basedir, 'search.db')
