@@ -5,7 +5,9 @@ from .forms import LoginForm, EditForm, PostForm
 from .models import User
 from datetime import datetime
 from config import POSTS_PER_PAGE
+from config import MAX_SEARCH_RESULTS
 
+"""
 @app.route('/')
 @app.route('/index')
 def index():
@@ -42,7 +44,7 @@ def index():
                            title='Home',
                            form=form,
                            posts=posts)
-
+"""
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -121,7 +123,7 @@ def before_request():
 		db.session.add(g.user)
 		db.session.commit()
 
-
+"""
 @app.route('/user/<nickname>')
 @login_required
 def user(nickname):
@@ -136,6 +138,7 @@ def user(nickname):
     return render_template('user.html',
                            user=user,
                            posts=posts)
+"""
 
 @app.route('/user/<nickname>')
 @app.route('/user/<nickname>/<int:page>')
@@ -214,3 +217,31 @@ def unfollow(nickname):
     db.session.commit()
     flash('You have stopped following ' + nickname + '.')
     return redirect(url_for('user', nickname=nickname))
+
+
+from forms import SearchForm
+
+@app.before_request
+def before_request():
+    g.user = current_user
+    if g.user.is_authenticated:
+        g.user.last_seen = datetime.utcnow()
+        db.session.add(g.user)
+        db.session.commit()
+        g.search_form = SearchForm()
+
+@app.route('/search', methods=['POST'])
+@login_required
+def search():
+    if not g.search_form.validate_on_submit():
+        return redirect(url_for('index'))
+    return redirect(url_for('search_results', query=g.search_form.search.data))
+
+
+@app.route('/search_results/<query>')
+@login_required
+def search_results(query):
+    results = Post.query.whoosh_search(query, MAX_SEARCH_RESULTS).all()
+    return render_template('search_results.html',
+                           query=query,
+                           results=results)

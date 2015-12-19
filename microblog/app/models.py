@@ -68,13 +68,10 @@ class User(db.Model):
         return new_nickname
 
     def followed_posts(self):
-        return Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(follow
+        return Post.query.join(followers, (followers.c.followed_id == Post.user_id)).filter(followers.c.follower_id == self.id).order_by(Post.timestamp.desc())
 
     def __repr__(self):
         return '<User %r>' % (self.nickname)
-
-ers.c.follower_id == self.id).order_by(Post.timestamp.desc())
-
 
 import sys
 if sys.version_info >= (3, 0):
