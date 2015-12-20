@@ -27,13 +27,11 @@ files = {}
 for file_id in range(len(file_list)):
 	files[file_id+1] = file_list[file_id], random.randrange(1, 20)
 
-ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
-
 # end point to initiate photo garelley
 @app.route('/update')
 def update_images():
 	os.chdir('/home/twenty-server/instagram-server/images')
-	resp = requests.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + ACCESS_TOKEN)
+	resp = requests.get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + INSTAGRAM_ACCESS_TOKEN)
 
 	data = json.loads(resp.text)['data']
 
