@@ -1,0 +1,17 @@
+2015-12-28T00:00:12.362588000 0.295550s notice: Recursively removing directory /Users/hiro99ishikawa/Desktop/21_practice/flask-rethink/rethinkdb_data/tmp
+2015-12-28T00:00:12.364751000 0.297720s notice: Initializing directory /Users/hiro99ishikawa/Desktop/21_practice/flask-rethink/rethinkdb_data
+2015-12-28T00:00:12.364926000 0.297885s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/hiro99ishikawa/Desktop/21_practice/flask-rethink/rethinkdb_data' did not already exist or is empty.)
+2015-12-28T00:00:12.364999000 0.297959s notice: Running rethinkdb 2.2.1 (CLANG 7.0.0 (clang-700.1.76))...
+2015-12-28T00:00:12.371668000 0.304629s notice: Running on Darwin 15.2.0 x86_64
+2015-12-28T00:00:12.371739000 0.304698s notice: Loading data from directory /Users/hiro99ishikawa/Desktop/21_practice/flask-rethink/rethinkdb_data
+2015-12-28T00:00:13.706929000 1.639890s info: Automatically using cache size of 222 MB
+2015-12-28T00:00:13.708231000 1.641190s notice: Listening for intracluster connections on port 29015
+2015-12-28T00:00:13.710588000 1.643548s notice: Listening for client driver connections on port 28015
+2015-12-28T00:00:13.710912000 1.643872s notice: Listening for administrative HTTP connections on port 8080
+2015-12-28T00:00:13.710922000 1.643881s notice: Listening on addresses: 127.0.0.1, ::1
+2015-12-28T00:00:13.710924000 1.643883s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-12-28T00:00:13.710931000 1.643890s notice: Server ready, "Hiro_MBP_local_rav" 02cd1912-97ec-41da-aee6-2b4a05831832
+2015-12-28T00:00:15.296430000 3.229434s notice: A newer version of the RethinkDB server is available: 2.2.2. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-12-28T00:00:35.729714000 23.663246s info: Table b3fc8542-7691-4c6f-a891-d873ef221324: Added replica on this server.
+2015-12-28T00:00:37.640614000 25.574190s info: Table b3fc8542-7691-4c6f-a891-d873ef221324: Starting a new Raft election for term 1.
+2015-12-28T00:00:37.866818000 25.800394s info: Table b3fc8542-7691-4c6f-a891-d873ef221324: This server is Raft leader for term 1. Latest log index is 0.
