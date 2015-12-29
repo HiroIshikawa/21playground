@@ -15,3 +15,8 @@
 2015-12-28T00:00:35.729714000 23.663246s info: Table b3fc8542-7691-4c6f-a891-d873ef221324: Added replica on this server.
 2015-12-28T00:00:37.640614000 25.574190s info: Table b3fc8542-7691-4c6f-a891-d873ef221324: Starting a new Raft election for term 1.
 2015-12-28T00:00:37.866818000 25.800394s info: Table b3fc8542-7691-4c6f-a891-d873ef221324: This server is Raft leader for term 1. Latest log index is 0.
+2015-12-28T21:47:30.439884000 13163.461169s notice: Server got SIGINT from pid 12057, uid 501; shutting down...
+2015-12-28T21:47:30.440160000 13163.461445s notice: Shutting down client connections...
+2015-12-28T21:47:30.440793000 13163.462078s notice: All client connections closed.
+2015-12-28T21:47:30.440813000 13163.462097s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-12-28T21:47:30.445281000 13163.466566s notice: Storage engine shut down.
