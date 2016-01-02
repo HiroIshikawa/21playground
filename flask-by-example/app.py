@@ -111,7 +111,7 @@ def get_results(job_key):
             result.result_no_stop_words.items(),
             key=operator.itemgetter(1),
             reverse=True
-        )[:12]
+        )[:14]
         return jsonify(results)
         #return str(job.result), 200
     else:
